@@ -1,53 +1,29 @@
-import React from "react";
+import { Text, View } from 'react-native';
 
-import { ExternalLink } from "./ExternalLink";
-import { MonoText } from "./StyledText";
-import { Text, View } from "./Themed";
+export const EditScreenInfo = ({ path }: { path: string }) => {
+  const title = 'Open up the code for this screen:';
+  const description =
+    'Change any of the text, save the file, and your app will automatically update.';
 
-import Colors from "@/constants/Colors";
-
-export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
-      <View className="items-center mx-12">
-        <Text
-          className="text-base leading-6 text-center"
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Open up the code for this screen:
-        </Text>
-
-        <View
-          className="rounded px-1 my-2"
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)"
-        >
-          <MonoText>{path}</MonoText>
+      <View className={styles.getStartedContainer}>
+        <Text className={styles.getStartedText}>{title}</Text>
+        <View className={styles.codeHighlightContainer + styles.homeScreenFilename}>
+          <Text>{path}</Text>
         </View>
-
-        <Text
-          className="text-base leading-6 text-center"
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Change any of the text, save the file, and your app will automatically
-          update.
-        </Text>
-      </View>
-
-      <View className="mt-4 mx-5 items-center">
-        <ExternalLink
-          className="py-4"
-          href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet"
-        >
-          <Text className="text-center" lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making
-            changes
-          </Text>
-        </ExternalLink>
+        <Text className={styles.getStartedText}>{description}</Text>
       </View>
     </View>
   );
-}
+};
 
+const styles = {
+  codeHighlightContainer: `rounded-md px-1`,
+  getStartedContainer: `items-center mx-12`,
+  getStartedText: `text-lg leading-6 text-center`,
+  helpContainer: `items-center mx-5 mt-4`,
+  helpLink: `py-4`,
+  helpLinkText: `text-center`,
+  homeScreenFilename: `my-2`,
+};
