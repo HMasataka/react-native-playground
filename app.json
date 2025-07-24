@@ -3,22 +3,20 @@
     "name": "react-native-playground",
     "slug": "react-native-playground",
     "version": "1.0.0",
-
+    "scheme": "react-native-playground",
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
-
+    "plugins": ["expo-router", "expo-web-browser"],
     "experiments": {
+      "typedRoutes": true,
       "tsconfigPaths": true
     },
-
-    "plugins": [],
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

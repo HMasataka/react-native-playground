@@ -1,9 +1,16 @@
 // This is an optional configuration file used primarily for debugging purposes when reporting issues.
 // It is safe to delete this file as it does not affect the functionality of your application.
 {
-  "cesVersion": "2.18.6",
+  "cesVersion": "2.18.7",
   "projectName": "react-native-playground",
   "packages": [
+    {
+      "name": "expo-router",
+      "type": "navigation",
+      "options": {
+        "type": "stack"
+      }
+    },
     {
       "name": "nativewind",
       "type": "styling"
@@ -20,12 +27,12 @@
   },
   "packageManager": {
     "type": "npm",
-    "version": "10.9.2"
+    "version": "11.4.0"
   },
   "os": {
     "type": "Darwin",
     "platform": "darwin",
     "arch": "arm64",
-    "kernelVersion": "24.1.0"
+    "kernelVersion": "24.5.0"
   }
 }

@@ -9,6 +9,8 @@ React Native (Expo) + NativeWindを使ったプロジェクト
 ```bash
 # Expoプロジェクトの作成
 npx rn-new@latest react-native-playground --nativewind
+# または、Expo Routerを使用する場合
+npx rn-new@latest react-native-playground --nativewind --expo-router
 
 # NativeWindのインストール
 npm install nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0
